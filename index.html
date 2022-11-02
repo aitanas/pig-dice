@@ -8,13 +8,20 @@
   </head>
   <body>
     <form id="form">
-      <input type="text" placeholder="Player 1">
-      <input type="text" placeholder="Player 2">
-      <button type="submit"> Start <button>
+      <input type="text" id="player1" placeholder="Player 1">
+      <input type="text" id="player2" placeholder="Player 2">
+      <button id="player-add" disabled> Add a player </button>
+      <button id="start" type="submit"> Start </button>
     </form>
     <div>
-      <button id="roll"> Roll </button>
-      <button id="hold"> Hold </button>
+      <button id="roll" disabled> Roll </button>
+      <button id="hold" disabled> Hold </button>
     <div>
+    <div>
+      <p>Player: <span id="player-name"> </p>
+      <p>Turn Score: <span id="turn-score"> </p>
+      <p>Current Score: <span id="current-score"> </p>
+      <p>Roll: <span id="dice-roll"> </p>
+    </div>
   </body>
 </html>
