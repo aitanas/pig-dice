@@ -88,6 +88,23 @@ Expected Output:
       diceroll = 1;
       return 0;
 
+Test: If the player rolls a 1, then their score for the turn will be set to 0. Their game score will not change.
+Code: newTurn(hold) where hold === false
+      turnScore = 2;
+      gameScore = 14;
+Expected Output: 
+      diceroll = 1
+      turnScore = 0;
+      gameScore = 14;
+
+Test: If the player chooses to hold, the turnScore will be added to the player's gameScore.
+Code: newTurn(hold) where hold === true
+      turnScore = 5;
+      gameScore = 14;
+Expected Output: 
+      turnScore = 0; (turn ends)
+      gameScore = 19;
+
 ## Known Bugs
 
 * 

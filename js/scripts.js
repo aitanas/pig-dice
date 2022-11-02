@@ -25,38 +25,42 @@ function Dice(previousRoll, currentRoll) {
 }
 
 Dice.prototype.roll = function() {
-  return Math.floor(Math.random() * (7-1) + 1);
+  return Math.round(Math.random() * (6-1) + 1);
 };
 
 // Business Logic for Player
-function Player(name, score) {
+function Player(name) {
   this.name = name;
-  this.score = score;
+  this.gameScore = 0;
 }
 
 
 function newTurn(hold, player) {
   let dice = new Dice();
+  let turnScore = 0;
+
   if(!hold) {
-    if(dice.roll() === 1)
+    let roll = dice.roll();
+    if(roll === 1)
     {
       console.log("dice roll === 1");
       return 0;
     }
     else {
-      player.score += dice.roll();
-      console.log("player scores!" + player.score);
+      turnScore += roll;
+      console.log("player scores! " + turnScore);
     }
   }
   else {
+    player.gameScore += turnScore;
     console.log("turn end, player held");
     return 0;
   }
 
-  if(player.score >= 100) {
+  if(player.gameScore >= 100) {
     console.log("score is 100");
     return 0;
   }
-  console.log(player.score);
+  console.log(player.gameScore);
 }
 
