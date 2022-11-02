@@ -8,6 +8,16 @@ function GameBoard() {
   this.turn = 0;
 }
 
+GameBoard.prototype.addPlayer = function(player) {
+  players.id = this.assignId();
+  this.players[player.id] = player;
+}
+
+GameBoard.prototype.assignId = function() {
+  this.id += 1;
+  return this.id;
+}
+
 // Business Logic for Player
 function Player(name, score) {
   this.name = name;
