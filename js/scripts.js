@@ -20,3 +20,7 @@ function Dice(previousRoll, currentRoll) {
   this.currentRoll = currentRoll;
 }
 
+Dice.prototype.roll() {
+  return Math.floor(Math.random() * (7-1) + 1);
+}
+
