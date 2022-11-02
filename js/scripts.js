@@ -46,7 +46,6 @@ function newTurn(hold, player) {
         gameBoard.turnId = 1;
       }      
       console.log("Next Player: "+ gameBoard.players[gameBoard.turnId].name);
-      return 0;
     } else {
       player.turnScore += gameBoard.diceRoll;
       console.log("player scores! " + player.turnScore);
@@ -64,13 +63,8 @@ function newTurn(hold, player) {
       gameBoard.turnId = 1;
     }  
     console.log("Player Held: " + player.gameScore + "Next Player: " + gameBoard.players[gameBoard.turnId].name);
-    return 0;
-  }
-
-  if (player.gameScore >= 100) {
-    console.log("score is 100," + gameBoard.players[gameBoard.turnId].name +" wins!");
-    return 0;
-  }
+  } 
+  checkEndGame(); 
   //console.log("Game Score:" + player.gameScore + "Turn Score: " + player.turnScore);
 }
 
@@ -120,8 +114,17 @@ function handleRoll(e) {
   displayTurn();
 }
 
-window.addEventListener("load", function () {
+function checkEndGame() {
+  if (gameBoard.players[gameBoard.turnId].gameScore >= 100) {
+    console.log("score is 100," + gameBoard.players[gameBoard.turnId].name +" wins!");
+    document.getElementById("turnDiv").append(gameBoard.players[gameBoard.turnId].name + " Won!");
+    document.querySelector("button#roll").setAttribute("disabled");
+    document.querySelector("button#hold").setAttribute("disabled");
+    }
+    return 0;
+}
 
+window.addEventListener("load", function () {
   document.querySelector("form#form").addEventListener("submit", handleGameStart);
   document.querySelector("button#hold").addEventListener("click", handleHold);
   document.querySelector("button#roll").addEventListener("click", handleRoll);
