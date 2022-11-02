@@ -25,18 +25,13 @@ Directions after cloning are as follows:
 
 ## How To Play
 
-Pig Dice is a game for 2-10 players in which each player takes turns rolling dice. 
+Pig Dice is a game for 2 players in which each player takes turns rolling dice. 
 * If a player rolls a number between 2 and 6, that number gets added to their turn's score. The player may then choose to hold, which adds the turn score to their overall score, or roll again.
 * If a player rolls a 1, the turn automatically ends and no points are given to the player's score.
 * The first player to reach a score of 100 wins.
 
 ## Tests
 ```
-Gameplay: each player rolls a dice
-- if the player rolls anything other than a 1, the roll value gets added to their score that turn. player can choose to "hold" and keep score or keep rolling
-- if player rolls a 1, they score 0 and their turn ends
-- first player to score 100 wins
-
 Describe Gameboard()
 
 Test: It will create a gameBoard object with two keys: player and score.
