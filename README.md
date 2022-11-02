@@ -1,9 +1,7 @@
-# Project Name
-### A project by
+# Pig Dice
+### A JavaScript Dice Rolling Game
 
-##### Description
-
-###### Description 2
+##### By Aitana Shough, Yodel Guanzon, and Jennifer Holcomb
 
 ## Technologies Used
 
@@ -14,16 +12,23 @@
 
 ## Setup/Installation Requirements
 
-This project may be viewed online via the corresponding [**GitHub pages site**]().
+This application may be played online in your browser via the corresponding [**GitHub pages site**](https://github.io/aitanas/pig-dice).
 
 Alternatively, you may clone this project to your local machine by using the following command:
 ```
-git clone https://github.com/aitanas/REPO.git
+git clone https://github.com/aitanas/pig-dice.git
 ```
 Directions after cloning are as follows:
-1. Open the **REPO** directory.
+1. Open the **pig-dice** directory.
 2. Open the file named **index.html** with an internet browser (i.e. Google Chrome) of your choice.
 3. Enjoy!
+
+## How To Play
+
+Pig Dice is a game for 2-10 players in which each player takes turns rolling dice. 
+* If a player rolls a number between 2 and 6, that number gets added to their turn's score. The player may then choose to hold, which adds the turn score to their overall score, or roll again.
+* If a player rolls a 1, the turn automatically ends and no points are given to the player's score.
+* The first player to reach a score of 100 wins.
 
 ## Tests
 ```
@@ -64,7 +69,6 @@ player = {
 Describe: Dice.prototype.roll()
 Test: It will roll a dice, returning a number 1-6.
 Code: dice.roll()
-```
 
 Describe: newTurn()
 Test: It should stop the turn (return 0) if the user chose to hold
@@ -104,16 +108,17 @@ Code: newTurn(hold) where hold === true
 Expected Output: 
       turnScore = 0; (turn ends)
       gameScore = 19;
+```
 
 ## Known Bugs
 
-* 
+* None at this time
 
 ## License
 
 **MIT License**
 
-Copyright (c) 2022 
+Copyright (c) 2022 Aitana Shough, Yodel Guanzon, and Jennifer Holcomb
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

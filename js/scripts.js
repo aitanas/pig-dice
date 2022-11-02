@@ -32,35 +32,40 @@ Dice.prototype.roll = function() {
 function Player(name) {
   this.name = name;
   this.gameScore = 0;
+  this.turnScore = 0;
 }
 
 
 function newTurn(hold, player) {
   let dice = new Dice();
-  let turnScore = 0;
 
   if(!hold) {
     let roll = dice.roll();
     if(roll === 1)
     {
       console.log("dice roll === 1");
+      player.turnScore = 0;
       return 0;
     }
     else {
-      turnScore += roll;
-      console.log("player scores! " + turnScore);
+      player.turnScore += roll;
+      console.log("player scores! " + player.turnScore);
+
     }
   }
   else {
-    player.gameScore += turnScore;
-    console.log("turn end, player held");
+    console.log("Turn Score: " + player.turnScore);
+    player.gameScore += player.turnScore;
+    console.log("turn end, player held: " + player.gameScore);
+    player.turnScore = 0;
     return 0;
   }
 
+
   if(player.gameScore >= 100) {
-    console.log("score is 100");
+    console.log("score is 100," + player +" wins!");
     return 0;
   }
-  console.log(player.gameScore);
+  console.log(Game Score: player.gameScore "Turn Score: ");
 }
 
