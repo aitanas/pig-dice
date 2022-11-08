@@ -64,7 +64,7 @@ describe ('addToTurnScore', () => {
 
   test('should return 0 if roll is 1', () => {
     let player1 = new Player("bruce");
-    expect(addToTurnScore()).toEqual(player1.turnScore);
+    expect(addToTurnScore(player1)).toEqual(player1.turnScore);
   });
 });
 

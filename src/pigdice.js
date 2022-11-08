@@ -25,6 +25,6 @@ export function Player(name) {
 }
 
 //
-export function addToTurnScore() {
-
+export function addToTurnScore(player1) {
+  return player1.turnScore;
 }
