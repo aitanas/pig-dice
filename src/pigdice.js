@@ -10,9 +10,11 @@ GameBoard.prototype.roll = function() {
 
 GameBoard.prototype.addPlayer = function(player1) {
   this.players = player1;
-  return this.players;
 };
 
+GameBoard.prototype.assignId = function() {
+  
+};
 // player 
 export function Player(name) {
   this.name = name;

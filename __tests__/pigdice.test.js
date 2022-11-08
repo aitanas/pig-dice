@@ -29,6 +29,11 @@ describe('GameBoard', () => {
       turnScore: 0
     });
   });
+
+  test('should increment gameBoard id by 1', () => {
+    gameBoard.assignId();
+    expect(gameBoard.id).toEqual(1);
+  });
 });
 
 describe ('Player', () => {
