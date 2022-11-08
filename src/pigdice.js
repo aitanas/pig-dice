@@ -8,9 +8,14 @@ GameBoard.prototype.roll = function() {
   return Math.round(Math.random() * (6-1) + 1);
 };
 
+GameBoard.prototype.addPlayer = function(players) {
+
+};
+
 // player 
 export function Player(name) {
   this.name = name;
   this.gameScore = 0;
   this.turnScore = 0;
 }
+

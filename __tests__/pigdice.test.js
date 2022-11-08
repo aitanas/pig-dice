@@ -18,13 +18,20 @@ describe('GameBoard', () => {
     expect(randomNum).toBeLessThanOrEqual(6);
     expect(randomNum).toBeGreaterThanOrEqual(1);
   });
+
+  test('add Player object to the gameBoard.players property', () => {
+    let player1 = new Player("Jeff");
+    gameBoard.addPlayer(player1);
+    expect(gameBoard.players).toEqual({player1});
+  });
 });
 
 describe ('Player', () => {
   
   test('should create a player object with correct properties', () => {
-    let player = new Player("jeff");
-    expect(player.name).toEqual("jeff");
+    let name = "Jeff";
+    let player = new Player(name);
+    expect(player.name).toEqual(name);
     expect(player.gameScore).toEqual(0);
     expect(player.turnScore).toEqual(0);
   });
