@@ -12,4 +12,8 @@ describe('GameBoard', () => {
     expect(gameBoard.turnId).toEqual(0);
     expect(gameBoard.diceRoll).toEqual(0);
   });
+
+  test('should return a random number 1-6', () => {
+    expect(gameBoard.roll()).toEqual(/1-6/);
+  })
 });

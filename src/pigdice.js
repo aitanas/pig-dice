@@ -4,3 +4,6 @@ export default function GameBoard() {
   this.turnId = 0;
   this.diceRoll = 0;
 }
+GameBoard.prototype.roll = function() {
+  
+};
