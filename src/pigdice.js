@@ -7,3 +7,8 @@ export default function GameBoard() {
 GameBoard.prototype.roll = function() {
   return Math.round(Math.random() * (6-1) + 1);
 };
+
+// player 
+function Player(name) {
+  
+}

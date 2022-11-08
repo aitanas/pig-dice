@@ -17,5 +17,16 @@ describe('GameBoard', () => {
     let randomNum = gameBoard.roll();
     expect(randomNum).toBeLessThanOrEqual(6);
     expect(randomNum).toBeGreaterThanOrEqual(1);
-  })
+  });
 });
+
+describe ('Player', () => {
+  
+  test('should create a player object with correct properties', () => {
+    let player = new Player("Jeff");
+    expect (player.name).toEqual("Jeff");
+    expect(player.gameScore).toEqual(0);
+    expect(player.turnScore).toEqual(0);
+  });
+});
+
