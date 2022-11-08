@@ -1,14 +1,15 @@
 import GameBoard from './../src/pigdice.js';
 
-describe('', () => {
+describe('GameBoard', () => {
+  let gameBoard;
   beforeEach(() => {
-    let gameBoard = GameBoard();
+    gameBoard = new GameBoard();
   });
 
   test('should create GameBoard Object with correct properties', () => {
-    expect(this.player).toEqual({});
-    expect(this.id).toEqual(0);
-    expect(this.turnId).toEqual(0);
-    expect(this.diceRoll).toEqual(0);
+    expect(gameBoard.players).toEqual(0);
+    expect(gameBoard.id).toEqual(0);
+    expect(gameBoard.turnId).toEqual(0);
+    expect(gameBoard.diceRoll).toEqual(0);
   });
 });
