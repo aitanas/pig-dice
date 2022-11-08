@@ -9,11 +9,13 @@ GameBoard.prototype.roll = function() {
 };
 
 GameBoard.prototype.addPlayer = function(player1) {
+  player1.id = this.assignId();
   this.players = player1;
 };
 
 GameBoard.prototype.assignId = function() {
   this.id += 1;
+  return this.id;
 };
 // player 
 export function Player(name) {

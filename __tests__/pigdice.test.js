@@ -25,12 +25,13 @@ describe('GameBoard', () => {
     gameBoard.addPlayer(player1);
     expect(gameBoard.players).toEqual({
       name: "Jeff",
+      id: 1,
       gameScore: 0,
       turnScore: 0
     });
   });
 
-  test('assign player1 id to assignId() ', () => {
+  test('assign player1 id to assignId()', () => {
     let player1 = new Player("jeff");
     gameBoard.addPlayer(player1);
     expect(player1.id).toEqual(1);
