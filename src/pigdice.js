@@ -8,8 +8,9 @@ GameBoard.prototype.roll = function() {
   return Math.round(Math.random() * (6-1) + 1);
 };
 
-GameBoard.prototype.addPlayer = function(players) {
-  
+GameBoard.prototype.addPlayer = function(player1) {
+  this.players = player1;
+  return this.players;
 };
 
 // player 

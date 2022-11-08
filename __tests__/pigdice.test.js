@@ -20,9 +20,14 @@ describe('GameBoard', () => {
   });
 
   test('add Player object to the gameBoard.players property', () => {
-    let player1 = new Player("Jeff");
+    let name = "Jeff";
+    let player1 = new Player(name);
     gameBoard.addPlayer(player1);
-    expect(gameBoard.players).toEqual({player1});
+    expect(gameBoard.players).toEqual({
+      name: "Jeff",
+      gameScore: 0,
+      turnScore: 0
+    });
   });
 });
 
