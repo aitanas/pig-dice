@@ -30,8 +30,14 @@ describe('GameBoard', () => {
     });
   });
 
+  test('assign player1 id to assignId() ', () => {
+    let player1 = new Player("jeff");
+    gameBoard.addPlayer(player1);
+    expect(player1.id).toEqual(1);
+  });
+
   test('should increment gameBoard id by 1', () => {
-    gameBoard.assignId();
+    gameBoard.assignId(); 
     expect(gameBoard.id).toEqual(1);
   });
 });
