@@ -1,4 +1,4 @@
-import { GameBoard, Player } from './../src/pigdice.js';
+import { GameBoard, Player, addToTurnScore } from './../src/pigdice.js';
 
 describe('GameBoard', () => {
   let gameBoard;
@@ -54,3 +54,48 @@ describe ('Player', () => {
   });
 });
 
+describe ('addToTurnScore', () => {
+  // let gameBoard;
+  // let player1;
+  // beforeEach(() => {
+  //   gameboard = new GameBoard();
+  //   player1 = new Player("bruce");
+  // });
+
+  test('should return 0 if roll is 1', () => {
+    let player1 = new Player("bruce");
+    expect(addToTurnScore()).toEqual(player1.turnScore);
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// describe ('playerTurn', () => {
+//   let gameBoard;
+//   let player1;
+//   let player2;
+//   beforeEach(() => {
+//   gameBoard = new GameBoard();
+//   player1 = new Player("Bruce");
+//   player2 = new Player("Alfred");
+//   });
+
+//   test('should change gameBoard property to 1', () => {
+//     playerTurn();
+//     expect(gameBoard.turnId).toEqual(1);
+//   });
+// });

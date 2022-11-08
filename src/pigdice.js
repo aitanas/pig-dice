@@ -23,3 +23,8 @@ export function Player(name) {
   this.gameScore = 0;
   this.turnScore = 0;
 }
+
+//
+export function addToTurnScore() {
+
+}
