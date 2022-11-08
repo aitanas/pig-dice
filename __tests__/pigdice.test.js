@@ -7,7 +7,7 @@ describe('GameBoard', () => {
   });
 
   test('should create GameBoard Object with correct properties', () => {
-    expect(gameBoard.players).toEqual(0);
+    expect(gameBoard.players).toEqual({});
     expect(gameBoard.id).toEqual(0);
     expect(gameBoard.turnId).toEqual(0);
     expect(gameBoard.diceRoll).toEqual(0);

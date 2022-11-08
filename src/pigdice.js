@@ -1,5 +1,5 @@
 export function GameBoard() {
-  this.players = 0;
+  this.players = {};
   this.id = 0;
   this.turnId = 0;
   this.diceRoll = 0;
@@ -9,7 +9,7 @@ GameBoard.prototype.roll = function() {
 };
 
 GameBoard.prototype.addPlayer = function(players) {
-
+  
 };
 
 // player 
