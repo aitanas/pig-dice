@@ -1,4 +1,4 @@
-import GameBoard from './../src/pigdice.js';
+import { GameBoard, Player } from './../src/pigdice.js';
 
 describe('GameBoard', () => {
   let gameBoard;
@@ -23,8 +23,8 @@ describe('GameBoard', () => {
 describe ('Player', () => {
   
   test('should create a player object with correct properties', () => {
-    let player = new Player("Jeff");
-    expect (player.name).toEqual("Jeff");
+    let player = new Player("jeff");
+    expect(player.name).toEqual("jeff");
     expect(player.gameScore).toEqual(0);
     expect(player.turnScore).toEqual(0);
   });
