@@ -13,7 +13,7 @@ GameBoard.prototype.addPlayer = function(player1) {
 };
 
 GameBoard.prototype.assignId = function() {
-  
+  this.id += 1;
 };
 // player 
 export function Player(name) {
