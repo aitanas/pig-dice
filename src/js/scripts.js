@@ -87,6 +87,8 @@ function handleGameStart(e) {
   displayTurn();
   holdButton.removeAttribute("disabled");
   rollButton.removeAttribute("disabled");
+  document.querySelector("button#start").setAttribute("disabled","");
+  
 }
 
 function displayTurn() {
@@ -97,6 +99,10 @@ function displayTurn() {
   document.getElementById("turn-score").innerText = turnScore;
   document.getElementById("current-score").innerText = currentScore;
   document.getElementById("dice-roll").innerText = gameBoard.diceRoll;
+  document.getElementById("player1-name").innerText = gameBoard.players[1].name;
+  document.getElementById("player2-name").innerText = gameBoard.players[2].name;
+  document.getElementById("player1-score").innerText = gameBoard.players[1].gameScore;
+  document.getElementById("player2-score").innerText = gameBoard.players[2].gameScore;
   
 }
 
@@ -118,8 +124,8 @@ function checkEndGame() {
   if (gameBoard.players[gameBoard.turnId].gameScore >= 100) {
     console.log("score is 100," + gameBoard.players[gameBoard.turnId].name +" wins!");
     document.getElementById("turnDiv").append(gameBoard.players[gameBoard.turnId].name + " Won!");
-    document.querySelector("button#roll").setAttribute("disabled");
-    document.querySelector("button#hold").setAttribute("disabled");
+    document.querySelector("button#roll").setAttribute("disabled", "");
+    document.querySelector("button#hold").setAttribute("disabled", "");
     }
     return 0;
 }

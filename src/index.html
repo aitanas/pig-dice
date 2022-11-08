@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="US-en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pig Dice</h1>
+      <form id="form">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" id="player1" placeholder="Player 1" class="form-control">
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" id="player2" placeholder="Player 2" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button id="start" type="submit" class="btn btn-info"> Start </button>
+          </div>
+        </div>
+      </form>
+      <div class="form-group row">
+        <div class="col-md-6">
+          <button id="roll" class="btn btn-outline-info" disabled> Roll </button>
+          <button id="hold" class="btn btn-outline-info" disabled> Hold </button>
+        </div>
+      </div>
+      <div id="turnDiv">
+        <p>Player: <span id="player-name"> </p>
+        <p>Turn Score: <span id="turn-score"> </p>
+        <p>Current Score: <span id="current-score"> </p>
+        <p>Roll: <span id="dice-roll"> </p>
+      </div>
+      <div id="scoreboard">
+        <h4>Scores:</h4>
+        <p><span id="player1-name"></span> : <span id="player1-score"></span></p>
+        <p><span id="player2-name"></span> : <span id="player2-score"></span></p>
+      </div>
+  </body>
+</html>
