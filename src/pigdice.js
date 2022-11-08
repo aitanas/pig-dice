@@ -5,5 +5,5 @@ export default function GameBoard() {
   this.diceRoll = 0;
 }
 GameBoard.prototype.roll = function() {
-  
+  return Math.round(Math.random() * (6-1) + 1);
 };

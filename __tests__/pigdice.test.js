@@ -14,6 +14,8 @@ describe('GameBoard', () => {
   });
 
   test('should return a random number 1-6', () => {
-    expect(gameBoard.roll()).toEqual(/1-6/);
+    let randomNum = gameBoard.roll();
+    expect(randomNum).toBeLessThanOrEqual(6);
+    expect(randomNum).toBeGreaterThanOrEqual(1);
   })
 });
