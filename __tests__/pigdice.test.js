@@ -44,58 +44,18 @@ describe('GameBoard', () => {
 });
 
 describe ('Player', () => {
-  
+  let player1;
+  beforeEach(() => {
+    player1 = new Player("Jeff");
+  });
   test('should create a player object with correct properties', () => {
-    let name = "Jeff";
-    let player = new Player(name);
-    expect(player.name).toEqual(name);
-    expect(player.gameScore).toEqual(0);
-    expect(player.turnScore).toEqual(0);
+    expect(player1.name).toEqual("Jeff");
+    expect(player1.gameScore).toEqual(0);
+    expect(player1.turnScore).toEqual(0);
+  });
+
+  test('should add 5 to turnScore', () => {
+    player1.addToTurnScore();
+    expect(player1.turnScore).toEqual(5);
   });
 });
-
-describe ('addToTurnScore', () => {
-  // let gameBoard;
-  // let player1;
-  // beforeEach(() => {
-  //   gameboard = new GameBoard();
-  //   player1 = new Player("bruce");
-  // });
-
-  test('should return 0 if roll is 1', () => {
-    let player1 = new Player("bruce");
-    expect(addToTurnScore(player1)).toEqual(player1.turnScore);
-  });
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// describe ('playerTurn', () => {
-//   let gameBoard;
-//   let player1;
-//   let player2;
-//   beforeEach(() => {
-//   gameBoard = new GameBoard();
-//   player1 = new Player("Bruce");
-//   player2 = new Player("Alfred");
-//   });
-
-//   test('should change gameBoard property to 1', () => {
-//     playerTurn();
-//     expect(gameBoard.turnId).toEqual(1);
-//   });
-// });
